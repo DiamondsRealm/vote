@@ -109,27 +109,34 @@
 	
 	<section id="status">
 			  
-		    <div class="server-status">
-			    Diamond's Realm is currently <span class="server-online"></span>!
-			    <br>Player Number: <span class="server-number"></span>/100
-			    <br>Current Players: <span class="players"></span>
-			    <br>Version: <span class="version"></span>
-		    </div>
-			    
+		   
+		<p id="online"></p>
+		<p id="version"></p>
+		<p id="MOTD"></p>
+		<p id="numplayers"></p>
+		<ul id="players"></ul>
 
-		
-		    <script>
-			function setup() {
-				loadJSON('https://api.mcsrvstat.us/2/diamondsrealm.serv.gs', gotData);
-			}
-			function gotData(data) {
-				println(data);	
-			}
-	    </script>
+		<script>
+		var xmlhttp = new XMLHttpRequest();
+		xmlhttp.onreadystatechange = function() {
+		  if (this.readyState == 4 && this.status == 200) {
+		    var myObj = JSON.parse(this.responseText);
 
-		
-		
-		
+		    document.getElementById("online").innerHTML = "Is the server online? " + myObj.online;
+
+		    document.getElementById("version").innerHTML = "Server Version: " + myObj.version;
+
+		    document.getElementById("MOTD").innerHTML = "Message of the Day: " + myObj.motd.html;
+
+		    document.getElementById("numplayers").innerHTML = "Number Online: "+ myObj.players.online + "/100";
+		    document.getElementById("players").innerHTML = myObj.players.list;
+		  }
+		    document.getElementById("MOTD").innerHTML = "Message of the Day: " + myObj.motd.html;
+		};
+		xmlhttp.open("GET", "https://api.mcsrvstat.us/2/diamondsrealm.serv.gs", true);
+		xmlhttp.send();
+		</script>
+
 		
 		
 		
