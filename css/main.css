@@ -291,6 +291,43 @@ a:hover {
 	transition: all .2s ease-in;
 }
 
+
+#status {
+	margin: 10px;
+	text-align: center;
+	padding-top: 66px;
+	padding-bottom: 66px;
+}
+
+#status h1 {
+	font-size: 30px;
+	font-weight: 700;
+	text-transform: uppercase;
+	margin-top: 15px;
+}
+
+#status .features {
+	max-width: 1280px;
+	margin: 0 auto;
+	padding-top: 66px;
+}
+
+#status .feature {
+	font-size: 60px;
+	color: #1c2630;
+	margin-top: 17px;
+}
+
+#status h2 {
+	margin-top: 5px;
+	font-size: 20px;
+}
+
+#status p {
+	margin-top: 3px;
+	font-size: 18px;
+}
+
 #gamemodes {
 	margin: 10px;
 	text-align: center;
