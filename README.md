@@ -1,3 +1,2 @@
 # DiamondsRealm
-A simple onepage website for you minecraft server.
-
+IP: Diamondsrealm.serv.gs
