@@ -108,11 +108,32 @@
 	
 	
 	<section id="status">
-			  <img
-			    class="server-icon"
-			    src="https://mcapi.us/server/image?ip=diamondsrealm.serv.gs"
-			    alt="Server Info"
-			       >
+			  
+		    <div class="server-status">
+			    Diamond's Realm is currently <span class="server-online"></span>!
+			    <br>Player Number: <span class="server-number"></span>/100
+			    <br>Current Players: <span class="players"></span>
+			    <br>Version: <span class="version"></span>
+		    </div>
+			    
+
+		
+		    <script>
+			function setup() {
+				loadJSON('https://api.mcsrvstat.us/2/diamondsrealm.serv.gs', gotData);
+			}
+			function gotData(data) {
+				println(data);	
+			}
+	    </script>
+
+		
+		
+		
+		
+		
+		
+		
 			 
 	</section>
 	
