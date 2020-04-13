@@ -76,7 +76,7 @@ a:hover {
     transition: all .2s ease-in;
 }
 
-/* Navbar */
+/* Navbar 
 button {
   position: relative;
   display: inline-block;
@@ -167,7 +167,7 @@ button {
   grid-gap: 0.625rem;
   grid-template-areas: ". main main ." ". main main .";
   }
-  
+  */
   #container {
     grid-area: main;
     align-self: center;
