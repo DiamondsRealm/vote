@@ -32,6 +32,7 @@
 		<div class="max-width">
 			  <a href="#head">Home</a>
 			  <a href="#about">About</a>
+			  <a href="#status">Server Status</a>
 			  <a href="#gamemodes">Gamemodes</a>
 			  <a href="#vote">Vote</a>
 			  <a href="#staff">Staff</a>
@@ -103,11 +104,32 @@
 	</section>
 	
 	<section id="status">
-		
-		<script src="https://mcapi.us/scripts/minecraft.js"></script>
-	    <div class="server-status">
-	      My awesome server is currently <span class="server-online"></span>!
-	    </div>
+		<div class="container">
+		      <section class="server-card" id="server-1">
+			<div class="flex server-header">
+			  <img
+			    class="server-icon"
+			    src="https://via.placeholder.com/64?text=Icon"
+			    alt="Server Icon"
+			    width="64"
+			    height="64"
+			  >
+
+			  <div class="server-status">
+		      		The server is currently <span class="server-online"></span>!
+		    	</div>
+
+			  <span class="server-address">Diamondsrealm.serv.gs</span>
+
+			  <div>
+			    <div class="server-version">Spigot 1.14.4</div>
+			    <div class="player-number">0/10</div>
+			  </div>
+			</div>
+		      </section>
+		    </div>
+			<script src="https://mcapi.us/scripts/minecraft.js"></script>
+		    
 	    <script>
 	      MinecraftAPI.getServerStatus('s.nerd.nu', {
 		port: 25565 // optional, only if you need a custom port
@@ -117,7 +139,7 @@
 		}
 
 		// you can change these to your own message!
-		document.querySelector('.server-online').innerHTML = status.online ? 'up' : 'down';
+		document.querySelector('.server-online').innerHTML = status.online ? 'online' : 'down';
 	      });
 	    </script>
 	</section>
