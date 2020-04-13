@@ -46,7 +46,7 @@
 		<h3>DiamondsRealm.serv.gs</h3>
 	</header>
 	<!-- End Header -->
-
+	
 	<!-- About Section -->
 	<section id="about">
 		<h1>OUR SERVER</h1>
@@ -91,7 +91,7 @@
 			</div>
 		</div>
 		<!-- End second row -->
-
+	
 		<!-- Note: You can add as many feature rows as you like. -->
 	</section>
 	<!-- End about section -->
@@ -100,6 +100,26 @@
 	<section id="banner" class="parallax">
 		<h1>WHAT ARE YOU WAITING FOR?</h1>
 		<h2>JOIN OUR SERVER NOW AT <i>DIAMONDSREALM.SERV.GS</i></h2>
+	</section>
+	
+	<section id="status">
+		
+		<script src="https://mcapi.us/scripts/minecraft.js"></script>
+	    <div class="server-status">
+	      My awesome server is currently <span class="server-online"></span>!
+	    </div>
+	    <script>
+	      MinecraftAPI.getServerStatus('s.nerd.nu', {
+		port: 25565 // optional, only if you need a custom port
+	      }, function (err, status) {
+		if (err) {
+		  return document.querySelector('.server-status').innerHTML = 'Error loading status';
+		}
+
+		// you can change these to your own message!
+		document.querySelector('.server-online').innerHTML = status.online ? 'up' : 'down';
+	      });
+	    </script>
 	</section>
 	<!-- End Banner 1 -->
 
